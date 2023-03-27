@@ -10,11 +10,19 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     margin: 0;
     background-color: var(--color-medium-grey);
     color: var(--color-white);
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 /* header */
@@ -25,6 +33,7 @@ body {
 .header__title {
     font-size: 3rem;
     font-weight: 900;
+    color: var(--color-light-grey);
 }
 
 /*controls*/
@@ -60,6 +69,14 @@ body {
     color: var(--color-light-grey);
     font-size: 3rem;
     height: 10rem;
+    border-bottom: solid var(--color-light-grey);
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+
+.counter__button:active{
+    background: var(--color-medium-grey);
+    transform: translateY(2%)
 }
 
 .counter__button_first{
@@ -67,11 +84,16 @@ body {
 }
 
 /*footer*/
+
 .footer {
     background: var(--color-darkgrey);
     color: var(--color-light-grey);
+    padding: 2rem;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .footer__link {
     background-color: var(--color-white);
 }
+
